@@ -8,7 +8,7 @@ Features:
 - Signatures update attempt (from data/signatures.json on this repository), else built-in signatures will used
 - Interactivity:
   - Error handler for textbox (red alert icon for invalid entered path)
-  - Error handler for patch button (message window for displayingsuccess/error info)
+  - Error handler for patch button (message window for displaying success/error info)
   - Patching progressbar
   - File choosing dialog window for "Choose" button
   - Textbox hint if no path entered
