@@ -50,7 +50,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             return PatcherError.Ok;
         }
 
-        private static readonly string PATCH_SIGNATURES_URL = "https://github.com/Pavel3333/Cyberpunk-2077-AMD-Optimization-Patcher/data/signatures.json";
+        private static readonly string PATCH_SIGNATURES_URL = "https://raw.githubusercontent.com/Pavel3333/Cyberpunk-2077-AMD-Optimization-Patcher/main/data/signatures.json";
         private static readonly List<PatcherSignature> SIGNATURES = new List<PatcherSignature>
         {
             new PatcherSignature(
