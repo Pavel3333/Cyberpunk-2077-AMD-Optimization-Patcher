@@ -15,9 +15,9 @@ Features:
   - Exit button
 
 Previews:
-![alt text](previews/preview1.png?raw=true)
-![alt text](previews/preview2.png?raw=true)
-![alt text](previews/preview3.png?raw=true)
+![Image alt](previews/preview1.png)
+![Image alt](previews/preview2.png)
+![Image alt](previews/preview3.png)
 
 TODO:
 - Finding Cyberpunk2077.exe path in registry
