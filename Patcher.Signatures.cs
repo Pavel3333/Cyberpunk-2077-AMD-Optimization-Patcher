@@ -7,14 +7,14 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
 {
     public class PatcherSignature
     {
-        public PatcherSignature(string newHash, string newSignature, string newReplacement)
+        public PatcherSignature(List<string> newHashes, string newSignature, string newReplacement)
         {
-            Hash = newHash;
+            Hashes = newHashes;
             Signature = newSignature;
             Replacement = newReplacement;
         }
 
-        public string Hash { get; set; }
+        public List<string> Hashes { get; set; }
         public string Signature { get; set; }
         public string Replacement { get; set; }
     }
@@ -54,8 +54,11 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
         private static readonly List<PatcherSignature> SIGNATURES = new List<PatcherSignature>
         {
             new PatcherSignature(
-                "E34EF581899F3A719001E1F85A0FD8C112B21471329DBAA9F25880E7678557A8",
-                "75 30 33 C9 B8 01 00 00 00 0F A2 8B C8 C1 F9 08",
+                new List<string>{
+                    "E34EF581899F3A719001E1F85A0FD8C112B21471329DBAA9F25880E7678557A8",
+                    "8BC5D75BBD5003D306C1C3E417DF5325DB21BA11D10AE26D0011E8527A720FD1"
+                },
+                "75 ?? 33 C9 B8 01 00 00 00 0F A2 8B C8 C1 F9 08",
                 "EB"
             )
         };

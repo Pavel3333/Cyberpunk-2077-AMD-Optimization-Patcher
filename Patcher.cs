@@ -199,7 +199,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
 
             onOperationFinished();
 
-            byte[] signature = hexToBytes(patcherSignature.Signature);
+            string[] signature = patcherSignature.Signature.Split();
             byte[] replacement = hexToBytes(patcherSignature.Replacement);
 
             int signatureSize = signature.Length;
@@ -213,7 +213,11 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
 
                 for (int signatureOffset = 0; signatureOffset < signatureSize; signatureOffset++)
                 {
-                    if (fileContents[fileOffset + signatureOffset] != signature[signatureOffset])
+                    string signatureByte = signature[signatureOffset];
+                    if (signatureByte == "??")
+                        continue;
+
+                    if (fileContents[fileOffset + signatureOffset] != Convert.ToByte(signatureByte, 16))
                     {
                         signatureFound = false;
                         break;
@@ -265,7 +269,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
                     {
                         string fileHash = getFileHash(fileStream);
 
-                        patcherSignature = signatures.Find(x => (x.Hash) == fileHash);
+                        patcherSignature = signatures.Find(x => x.Hashes.Contains(fileHash));
                         if (patcherSignature == null)
                             return PatcherError.InvalidFileHash;
                     }
