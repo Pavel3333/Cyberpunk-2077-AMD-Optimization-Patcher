@@ -3,7 +3,7 @@ Patcher for Cyberpunk 2077 game optimization on AMD processors
 
 Uses .NET Framework (v4.7.2) and Newtonsoft.Json package.
 
-Features:
+## Features:
 - Drag-and-Drop
 - Signatures update attempt (from data/signatures.json on this repository), else built-in signatures will used
 - Interactivity:
@@ -14,14 +14,14 @@ Features:
   - Textbox hint if no path entered
   - Exit button
 
-Previews:
-![Image alt](previews/preview1.png)
-![Image alt](previews/preview2.png)
-![Image alt](previews/preview3.png)
+## Previews:
+![Preview 1](previews/preview1.png)
+![Preview 2](previews/preview2.png)
+![Preview 2](previews/preview3.png)
 
-TODO:
+## TODO:
 - Finding Cyberpunk2077.exe path in registry
 - Translate it on Russian
 
-Changelog:
+## Changelog:
 - v1.0: initial commit
