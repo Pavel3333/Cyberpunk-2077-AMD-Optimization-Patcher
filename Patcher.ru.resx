@@ -179,9 +179,6 @@
   <data name="exitButton.Text" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cyberpunk 2077 - Патчер для оптимизации на процессорах AMD</value>
   </data>

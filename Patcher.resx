@@ -121,14 +121,14 @@
   <data name="cyberpunkPathLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 17</value>
   </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
   <data name="cyberpunkPathLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="changePathButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;changePathButton.Name" xml:space="preserve">
+    <value>changePathButton</value>
   </data>
   <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 32</value>
@@ -149,6 +149,9 @@
     <value>Patcher</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="panel1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -166,9 +169,6 @@
   </data>
   <data name="textBox1.Text" xml:space="preserve">
     <value>Path to Cyberpunk2077.exe</value>
-  </data>
-  <data name="exitButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="patchButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -192,11 +192,11 @@
   <data name="patchButton.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="changePathButton.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="patchButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="patchButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 31</value>
@@ -212,9 +212,6 @@
   </data>
   <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
     <value>textBox1</value>
-  </data>
-  <data name="pictureBox1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -234,17 +231,14 @@
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 11</value>
   </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;changePathButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
   <data name="progressBar1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
-  </data>
-  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 44</value>
   </data>
   <data name="&gt;&gt;changePathButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -258,6 +252,9 @@
   <data name="&gt;&gt;chooseCyberpunkFileDialog.Name" xml:space="preserve">
     <value>chooseCyberpunkFileDialog</value>
   </data>
+  <data name="&gt;&gt;cyberpunkPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;textboxErrorProvider.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -269,9 +266,6 @@
   </data>
   <data name="textBox1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 44</value>
   </data>
   <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -297,20 +291,20 @@
   <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
-    <value>progressBar1</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="exitButton.Error" xml:space="preserve">
-    <value />
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;patchButton.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="exitButton.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;patchButton.Name" xml:space="preserve">
     <value>patchButton</value>
-  </data>
-  <data name="exitButton.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="pictureBox1.Error" xml:space="preserve">
     <value />
@@ -330,8 +324,11 @@
   <data name="&gt;&gt;patchButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;changePathButton.Name" xml:space="preserve">
-    <value>changePathButton</value>
+  <data name="&gt;&gt;patchingBGWorker.Name" xml:space="preserve">
+    <value>patchingBGWorker</value>
+  </data>
+  <data name="changePathButton.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="changePathButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>543, 6</value>
@@ -348,8 +345,8 @@
   <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
     <value>pictureBox1</value>
   </data>
-  <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="pictureBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -366,8 +363,8 @@
   <data name="panel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 44</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -378,10 +375,13 @@
   <data name="cyberpunkPathLabel.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;patchingBGWorker.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="patchButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="exitButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="pictureBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
@@ -393,8 +393,8 @@
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 44</value>
   </data>
   <data name="changePathButton.Text" xml:space="preserve">
     <value>Choose</value>
@@ -402,14 +402,14 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 354</value>
   </data>
-  <data name="&gt;&gt;patchButton.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="patchButton.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="exitButton.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cyberpunk 2077 AMD Optimization Patcher</value>
@@ -417,8 +417,8 @@
   <data name="&gt;&gt;changePathButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;changePathButton.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="cyberpunkPathLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 17</value>
@@ -426,8 +426,8 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>624, 441</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="patchButton.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
     <value>exitButton</value>
@@ -438,11 +438,11 @@
   <data name="changePathButton.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;cyberpunkPathLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
+    <value>progressBar1</value>
   </data>
-  <data name="&gt;&gt;patchingBGWorker.Name" xml:space="preserve">
-    <value>patchingBGWorker</value>
+  <data name="exitButton.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

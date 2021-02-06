@@ -41,9 +41,9 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             this.cyberpunkPathLabel = new System.Windows.Forms.Label();
             this.changePathButton = new System.Windows.Forms.Button();
             this.textboxErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.patchingBGWorker = new System.ComponentModel.BackgroundWorker();
             this.chooseCyberpunkFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textboxErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,6 +128,16 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             this.textboxErrorProvider.ContainerControl = this;
             resources.ApplyResources(this.textboxErrorProvider, "textboxErrorProvider");
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.textboxErrorProvider.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error"));
+            this.textboxErrorProvider.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment"))));
+            this.textboxErrorProvider.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding"))));
+            this.pictureBox1.Image = global::Cyberpunk_2077_AMD_Optimization_Patcher.Properties.Resources.cyberpunk;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // patchingBGWorker
             // 
             this.patchingBGWorker.WorkerReportsProgress = true;
@@ -139,16 +149,6 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             // 
             resources.ApplyResources(this.chooseCyberpunkFileDialog, "chooseCyberpunkFileDialog");
             this.chooseCyberpunkFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.chooseCyberpunkFileDialog_FileOk);
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.textboxErrorProvider.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error"));
-            this.textboxErrorProvider.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment"))));
-            this.textboxErrorProvider.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding"))));
-            this.pictureBox1.Image = global::Cyberpunk_2077_AMD_Optimization_Patcher.Properties.Resources.cyberpunk;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // Patcher
             // 
@@ -186,6 +186,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider textboxErrorProvider;
         private System.ComponentModel.BackgroundWorker patchingBGWorker;
+        private System.ComponentModel.ComponentResourceManager resources;
         private System.Windows.Forms.OpenFileDialog chooseCyberpunkFileDialog;
     }
 }

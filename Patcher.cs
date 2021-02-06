@@ -22,7 +22,6 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             InvalidPath,
             FileNotExists,
             BGTaskError,
-            InvalidFileHash,
             SignatureNotFound,
             #endregion
 
@@ -46,8 +45,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             "Invalid path",
             "File is not exists",
             "Error while processing background task",
-            "Invalid file hash",
-            "Signature was not found",
+            "There aren't available patches for this file",
 
             "Error while getting signatures. In the future, the patcher will use built-in (possibly outdated) signatures to work. Exception data: \n",
             "Error while parsing signatures. In the future, the patcher will use built-in (possibly outdated) signatures to work. Exception data: \n",
@@ -172,7 +170,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
             ));
         }
 
-        private PatcherError patchFile(FileInfo fileInfo, PatcherSignature patcherSignature)
+        private PatcherError patchFile(FileInfo fileInfo, Patch patcherSignature)
         {
             FileStream fileStream;
 
@@ -255,6 +253,7 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
 
         private PatcherError processFile(FileInfo fileInfo, PatcherFileProcessingType processingType)
         {
+            PatcherError error = PatcherError.Ok;
             FileStream fileStream;
 
             try
@@ -263,22 +262,36 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
                     processingType == PatcherFileProcessingType.Patch
                 )
                 {
-                    PatcherSignature patcherSignature;
+                    List<Patch> availablePatches = new List<Patch>();
 
                     using (fileStream = fileInfo.Open(FileMode.Open, FileAccess.Read))
                     {
                         string fileHash = getFileHash(fileStream);
 
-                        patcherSignature = signatures.Find(x => x.Hashes.Contains(fileHash));
-                        if (patcherSignature == null)
-                            return PatcherError.InvalidFileHash;
+                        foreach (Patch patch in signatures)
+                        {
+                            List<string> hashes = patch.Hashes;
+                            if (hashes.Count == 0 || hashes.Contains(fileHash))
+                            {
+                                availablePatches.Add(patch);
+                            }
+                        }
                     }
 
-                    if (processingType == PatcherFileProcessingType.Patch)
+                    switch (processingType)
                     {
-                        PatcherError error = patchFile(fileInfo, patcherSignature);
-                        if (error != PatcherError.Ok)
-                            return error;
+                        case PatcherFileProcessingType.Check:
+                            if (availablePatches.Count == 0)
+                                return PatcherError.SignatureNotFound;
+                            break;
+                        case PatcherFileProcessingType.Patch:
+                            foreach (Patch patch in availablePatches)
+                            {
+                                error = patchFile(fileInfo, patch);
+                                if (error != PatcherError.Ok)
+                                    return error;
+                            }
+                            break;
                     }
                 }
             }
