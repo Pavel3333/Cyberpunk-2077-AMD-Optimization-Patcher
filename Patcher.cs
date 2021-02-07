@@ -188,15 +188,6 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
 
             onOperationFinished();
 
-            FileInfo backupFileInfo = new FileInfo(fileInfo.FullName + ".bak");
-            using (fileStream = backupFileInfo.Open(FileMode.OpenOrCreate, FileAccess.Write))
-            {
-                fileStream.Position = 0;
-                fileStream.Write(fileContents, 0, fileSize);
-            }
-
-            onOperationFinished();
-
             string[] signature = patcherSignature.Signature.Split();
             byte[] replacement = hexToBytes(patcherSignature.Replacement);
 
@@ -233,6 +224,15 @@ namespace Cyberpunk_2077_AMD_Optimization_Patcher
 
             if (!signatureFound)
                 return PatcherError.SignatureNotFound;
+
+            onOperationFinished();
+
+            FileInfo backupFileInfo = new FileInfo(fileInfo.FullName + ".bak");
+            using (fileStream = backupFileInfo.Open(FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                fileStream.Position = 0;
+                fileStream.Write(fileContents, 0, fileSize);
+            }
 
             onOperationFinished();
 
